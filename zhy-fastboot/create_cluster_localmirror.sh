@@ -26,7 +26,7 @@ kops create cluster \
      --zones=cn-northwest-1a,cn-northwest-1b,cn-northwest-1c \
      --master-count=3 \
      --master-size="t2.medium" \
-     --node-count=1 \
+     --node-count=0 \
      --node-size="t2.medium"  \
      --vpc=${vpcid} \
      --kubernetes-version="$kubernetesVersion" \
