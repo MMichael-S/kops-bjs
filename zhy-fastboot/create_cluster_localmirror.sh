@@ -5,11 +5,10 @@ source env.config
 cluster_name='cluster.zhy.k8s.local'
 
 # official CoreOS AMI
-#ami='ami-e7958185'
-ami='ami-06a0b464'
+ami='ami-c9abbfab'
 
 # change this to your vpcid
-vpcid='vpc-bb3e99d2'
+vpcid='vpc-c66d9eaf'
 
 KUBERNETES_VERSION='v1.9.6'
 KOPS_VERSION='1.9.1'
@@ -27,7 +26,7 @@ kops create cluster \
      --zones=cn-northwest-1a,cn-northwest-1b,cn-northwest-1c \
      --master-count=3 \
      --master-size="t2.medium" \
-     --node-count=2 \
+     --node-count=1 \
      --node-size="t2.medium"  \
      --vpc=${vpcid} \
      --kubernetes-version="$kubernetesVersion" \
