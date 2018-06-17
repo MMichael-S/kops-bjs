@@ -1,4 +1,5 @@
 spec:
+  sshKeyName: ZHY-Privatekey
   assets:
     fileRepository: https://s3.cn-north-1.amazonaws.com.cn/kops-bjs/fileRepository/
   hooks:
@@ -39,6 +40,6 @@ spec:
         - https://registry.docker-cn.com
   egressProxy:
     httpProxy:
-      host: <host>
+      host: internal-ProxyELB-kops-proxy-622406579.cn-northwest-1.elb.amazonaws.com.cn
       port: 8888
     excludes: amazonaws.com.cn,amazonaws.cn,aliyun.cn,aliyuncs.com,registry.docker-cn.com
